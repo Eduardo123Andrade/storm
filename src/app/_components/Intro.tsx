@@ -11,7 +11,7 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 })
 
-export const AboutUs = () => {
+export const Intro = () => {
   const onClick = () => {
     console.log("here")
   }
