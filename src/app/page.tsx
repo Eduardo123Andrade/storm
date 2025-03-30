@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { AboutUs, Header } from "./components"
+import { AboutUs, Header } from "./_components"
 
 export default function Home() {
   return (
