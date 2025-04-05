@@ -1,4 +1,6 @@
 import { Inter } from "next/font/google"
+import StormIllustration from "../../../public/assets/svgs/storm.svg"
+import Image from "next/image"
 
 const inter = Inter({
   weight: ["500"],
@@ -8,9 +10,11 @@ const inter = Inter({
 
 export const Header = () => {
   return (
-    <div className="flex justify-between bg-amber-700 items-center">
-      <div className="">Storm</div>
-      <div className="flex gap-x-10 pt-2 pb-2 pl-5 pr-5 bg-amber-900">
+    <div className="flex justify-between  items-center">
+      <div className="">
+        <Image src={StormIllustration} alt="storm" />
+      </div>
+      <div className="flex gap-x-10 pt-2 pb-2 pl-5 pr-5 bg-[#033B65]">
         <label className={`${inter.className} `}>Sobre nós</label>
         <label className={inter.className}>Serviços Oferecidos</label>
         <label className={inter.className}>Cases</label>
