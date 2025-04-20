@@ -27,7 +27,7 @@ export const AboutUs = () => {
       </h1>
 
       <p
-        className={`${inter.className} 2xl:px-40 text-left text-2xl 2xl:text-3xl font-normal`}
+        className={`${inter.className} 2xl:px-34 text-left text-2xl 2xl:text-3xl font-normal`}
       >
         Unimos criatividade e tecnologia para criar estratégias inovadoras em
         marketing digital, design, audiovisual e tecnologia. Cada projeto é um
