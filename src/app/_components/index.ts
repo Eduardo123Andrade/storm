@@ -1,0 +1,5 @@
+export { AboutUs } from "./AboutUs"
+export { Header } from "./Header"
+export { Intro } from "./Intro"
+export { Section } from "./Section"
+export { Services } from "./Services"
