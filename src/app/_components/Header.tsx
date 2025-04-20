@@ -8,17 +8,24 @@ const inter = Inter({
   subsets: ["latin"],
 })
 
+const Item: React.FC<{ label: string }> = ({ label }) => (
+  <label
+    className={`${inter.className} hover:bg-[#FF4E17] cursor-pointer px-2 `}
+  >
+    {label}
+  </label>
+)
 export const Header = () => {
   return (
     <div className="flex justify-between  items-center">
       <div className="">
         <Image src={StormIllustration} alt="storm" />
       </div>
-      <div className="flex gap-x-10 pt-2 pb-2 pl-5 pr-5">
-        <label className={`${inter.className} `}>Sobre nós</label>
-        <label className={inter.className}>Serviços Oferecidos</label>
-        <label className={inter.className}>Cases</label>
-        <label className={inter.className}>Clientes</label>
+      <div className="flex gap-x-8 py-2 px-5 2xl:text-xl">
+        <Item label="Sobre nós" />
+        <Item label="Serviços Oferecidos" />
+        <Item label="Cases" />
+        <Item label="Clientes" />
       </div>
     </div>
   )
