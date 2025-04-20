@@ -24,10 +24,14 @@ export const Services = () => {
   return (
     <Section className="flex flex-col gap-12">
       <div className="text-center">
-        <h1 className={`${openSans.className} text-5xl font-extrabold`}>
+        <h1
+          className={`${openSans.className} text-5xl 2xl:text-6xl font-extrabold`}
+        >
           Seu sucesso começa aqui
         </h1>
-        <p className={`${openSans.className} text-2xl font-semibold`}>
+        <p
+          className={`${openSans.className} text-2xl 2xl:text-3xl 2xl:pt-2 font-semibold`}
+        >
           Da ideia à execução, somos a tempestade que move seu negócio.
         </p>
       </div>
