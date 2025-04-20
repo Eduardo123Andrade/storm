@@ -1,5 +1,6 @@
 import { Inter, Open_Sans } from "next/font/google"
 import { Results } from "./Results"
+import { Section } from "./Section"
 
 const inter = Inter({
   weight: ["400"],
@@ -15,7 +16,7 @@ const openSans = Open_Sans({
 
 export const AboutUs = () => {
   return (
-    <section className="flex justify-center flex-col text-center gap-12 px-48">
+    <Section className="flex justify-center flex-col text-center gap-12 px-48">
       <h1 className={`${openSans.className} text-5xl font-extrabold`}>
         <span className="underline underline-offset-[14px] decoration-amber-600">
           Impulsione
@@ -23,7 +24,7 @@ export const AboutUs = () => {
         sua marca
       </h1>
 
-      <p className={`${inter.className} text-2xl font-normal`}>
+      <p className={`${inter.className} px-60 text-left text-2xl font-normal`}>
         Unimos criatividade e tecnologia para criar estratégias inovadoras em
         marketing digital, design, audiovisual e tecnologia. Cada projeto é um
         desafio que encaramos com ousadia, sempre buscando o equilíbrio perfeito
@@ -40,6 +41,6 @@ export const AboutUs = () => {
         <Results quantity="+50" label="Clientes satisfeitos" />
         <Results quantity="+75%" label="Resultados convertidos" />
       </div>
-    </section>
+    </Section>
   )
 }

@@ -14,7 +14,7 @@ export const Header = () => {
       <div className="">
         <Image src={StormIllustration} alt="storm" />
       </div>
-      <div className="flex gap-x-10 pt-2 pb-2 pl-5 pr-5 bg-[#033B65]">
+      <div className="flex gap-x-10 pt-2 pb-2 pl-5 pr-5">
         <label className={`${inter.className} `}>Sobre nós</label>
         <label className={inter.className}>Serviços Oferecidos</label>
         <label className={inter.className}>Cases</label>
