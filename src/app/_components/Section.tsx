@@ -3,5 +3,5 @@ interface SectionProps extends React.PropsWithChildren {
 }
 
 export const Section: React.FC<SectionProps> = ({ children, className }) => {
-  return <section className={` h-[70vh] ${className} `}>{children}</section>
+  return <section className={` h-[80vh] ${className} `}>{children}</section>
 }
