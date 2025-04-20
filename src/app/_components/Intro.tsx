@@ -20,13 +20,15 @@ export const Intro = () => {
   return (
     <Section className="overflow-hidden flex flex-col justify-end">
       <section className="flex justify-between items-center ">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 2xl:gap-10">
           <div>
-            <h1 className={`${openSans.className} text-5xl font-extrabold`}>
+            <h1
+              className={`${openSans.className} text-5xl 2xl:text-6xl font-extrabold`}
+            >
               Mais do que uma agência,
               <br />
               somos uma{" "}
-              <span className="text-orange-400">
+              <span className="text-[#FF4E17]">
                 tempestade
                 <br />
               </span>
@@ -34,7 +36,9 @@ export const Intro = () => {
             </h1>
           </div>
 
-          <p className={`${openSans.className} text-2xl font-bold`}>
+          <p
+            className={`${openSans.className} text-2xl 2xl:text-3xl font-bold`}
+          >
             A Storm Studio une criatividade, estratégia e inovação
             <br />
             para transformar marcas e negócios.
