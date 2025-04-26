@@ -13,6 +13,7 @@
 
   --color-test1: #041a2b66;
   --color-test2: #115a92;
+  --color-test3: #041a2b;
 }
 
 @media (prefers-color-scheme: dark) {

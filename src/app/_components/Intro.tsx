@@ -5,6 +5,7 @@ import { Button } from "./Button"
 import Image from "next/image"
 import TVImage from "../../../public/assets/images/tvs.png"
 import { Section } from "./Section"
+import { forwardRef } from "react"
 
 const openSans = Open_Sans({
   weight: ["800", "700"],
@@ -12,13 +13,13 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 })
 
-export const Intro = () => {
+export const Intro = forwardRef<HTMLElement>((_, ref) => {
   const onClick = () => {
     console.log("here")
   }
 
   return (
-    <Section className="overflow-hidden flex flex-col justify-end">
+    <Section ref={ref} className="overflow-hidden flex flex-col justify-end">
       <section className="flex justify-between items-center ">
         <div className="flex flex-col gap-5 2xl:gap-10">
           <div>
@@ -62,4 +63,4 @@ export const Intro = () => {
       </section>
     </Section>
   )
-}
+})

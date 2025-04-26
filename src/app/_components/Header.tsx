@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google"
 import StormIllustration from "../../../public/assets/svgs/storm.svg"
 import Image from "next/image"
+import { RefAttributes, useMemo } from "react"
 
 const inter = Inter({
   weight: ["500"],
@@ -8,25 +9,58 @@ const inter = Inter({
   subsets: ["latin"],
 })
 
-const Item: React.FC<{ label: string }> = ({ label }) => (
+interface HeaderProps {
+  refs: (() => void)[]
+}
+
+interface ItemProps {
+  label: string
+  onClick?: () => void
+}
+const Item: React.FC<ItemProps> = ({ label, onClick }) => (
   <label
     className={`${inter.className} hover:bg-[#FF4E17] cursor-pointer px-2 `}
+    onClick={onClick}
   >
     {label}
   </label>
 )
-export const Header = () => {
+
+export const Header: React.FC<HeaderProps> = ({ refs }) => {
+  const [ref1, ref2, ref3] = refs
+
+  const onPressAboutUs = () => {
+    if (ref1) {
+      ref1()
+    }
+  }
+
+  const onPressServices = () => {
+    if (ref2) {
+      ref2()
+    }
+  }
+
+  const onPressCases = () => {}
+
+  const onPressClients = () => {
+    if (ref3) {
+      ref3()
+    }
+  }
+
   return (
-    <div className="flex justify-between  items-center">
-      <div className="">
+    <nav className="flex justify-between items-center sticky top-0 bg-test3 opacity-100">
+      {/* <nav className="flex justify-between  items-center"> */}
+      <div className="py-4">
         <Image src={StormIllustration} alt="storm" />
       </div>
       <div className="flex gap-x-8 py-2 px-5 2xl:text-xl">
-        <Item label="Sobre nós" />
-        <Item label="Serviços Oferecidos" />
-        <Item label="Cases" />
-        <Item label="Clientes" />
+        <Item label="Sobre nós" onClick={onPressAboutUs} />
+        <Item label="Serviços Oferecidos" onClick={onPressServices} />
+        <Item label="Cases" onClick={onPressCases} />
+        <Item label="Clientes" onClick={onPressClients} />
       </div>
-    </div>
+    </nav>
   )
 }

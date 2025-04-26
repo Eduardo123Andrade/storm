@@ -1,6 +1,8 @@
+"use client"
 import { Inter, Open_Sans } from "next/font/google"
 import { Results } from "./Results"
 import { Section } from "./Section"
+import { forwardRef } from "react"
 
 const inter = Inter({
   weight: ["400"],
@@ -14,9 +16,12 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 })
 
-export const AboutUs = () => {
+export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
   return (
-    <Section className="flex justify-center flex-col text-center gap-12 px-48 2xl:px-40">
+    <Section
+      ref={ref}
+      className="flex justify-center flex-col text-center gap-12 px-48 2xl:px-40"
+    >
       <h1
         className={`${openSans.className} text-5xl 2xl:text-7xl font-extrabold`}
       >
@@ -47,4 +52,4 @@ export const AboutUs = () => {
       </div>
     </Section>
   )
-}
+})
