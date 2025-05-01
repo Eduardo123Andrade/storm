@@ -1,6 +1,6 @@
 "use client"
 import { useRef } from "react"
-import { AboutUs, Carousel, Header, Intro, Services } from "./_components"
+import { AboutUs, Header, Intro, Partners, Services } from "./_components"
 
 const scrollTo = (refElement: HTMLElement) => {
   const navbar = document.querySelector("nav")
@@ -37,15 +37,14 @@ export default function Home() {
   }
 
   return (
-    // <div className="px-32 pt-32 bg-gradient-to-b from-test1 from-70% via-test2 via-95% to-test1 to-100%">
-    <div className="bg-gradient-to-b from-test1 from-70% via-test2 via-95% to-test1 to-100%">
+    <div className="pt-32  bg-gradient-to-b from-test1 from-55% via-test2 via-60% to-test1 to-100%">
       <Header refs={[onPressAboutUs, onPressServices, onPressCases]} />
-      <div className="gap-12 flex flex-col">
+      <div className="gap-12 flex flex-col overflow-hidden">
         <Intro ref={ref1} />
         <AboutUs ref={ref2} />
         <Services ref={ref3} />
+        <Partners />
       </div>
-      <Carousel />
     </div>
   )
 }

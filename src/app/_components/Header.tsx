@@ -19,7 +19,7 @@ interface ItemProps {
 }
 const Item: React.FC<ItemProps> = ({ label, onClick }) => (
   <label
-    className={`${inter.className} hover:bg-[#FF4E17] cursor-pointer px-2 `}
+    className={`${inter.className} rounded-md hover:bg-[#FF4E17] cursor-pointer py-1 px-2 select-none`}
     onClick={onClick}
   >
     {label}
@@ -50,8 +50,19 @@ export const Header: React.FC<HeaderProps> = ({ refs }) => {
   }
 
   return (
-    <nav className="flex justify-between items-center sticky top-0 bg-test3 opacity-100">
-      {/* <nav className="flex justify-between  items-center"> */}
+    <nav
+      className="
+      px-32
+      flex
+      justify-between
+      items-center
+      sticky
+      top-0
+      backdrop-brightness-0
+      bg-test1
+      z-2
+    "
+    >
       <div className="py-4">
         <Image src={StormIllustration} alt="storm" />
       </div>

@@ -16,8 +16,8 @@ export const Carousel = () => {
         }}
       >
         {duplicatedSlidesData.map((item, index) => (
-          <li>
-            <Image key={index} src={item.src} alt="" width={250} height={250} />
+          <li key={index}>
+            <Image src={item.src} alt="" width={250} height={250} />
           </li>
         ))}
       </ul>
