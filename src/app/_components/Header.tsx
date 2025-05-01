@@ -10,7 +10,10 @@ const inter = Inter({
 })
 
 interface HeaderProps {
-  refs: (() => void)[]
+  onPressAboutUs: () => void
+  onPressServices: () => void
+  onPressCases: () => void
+  onPressClients: () => void
 }
 
 interface ItemProps {
@@ -26,26 +29,33 @@ const Item: React.FC<ItemProps> = ({ label, onClick }) => (
   </label>
 )
 
-export const Header: React.FC<HeaderProps> = ({ refs }) => {
-  const [ref1, ref2, ref3] = refs
-
-  const onPressAboutUs = () => {
-    if (ref1) {
-      ref1()
+export const Header: React.FC<HeaderProps> = ({
+  onPressAboutUs,
+  onPressCases,
+  onPressClients,
+  onPressServices,
+}) => {
+  const _onPressAboutUs = () => {
+    if (onPressAboutUs) {
+      onPressAboutUs()
     }
   }
 
-  const onPressServices = () => {
-    if (ref2) {
-      ref2()
+  const _onPressServices = () => {
+    if (onPressServices) {
+      onPressServices()
     }
   }
 
-  const onPressCases = () => {}
+  const _onPressCases = () => {
+    if (onPressCases) {
+      onPressCases()
+    }
+  }
 
-  const onPressClients = () => {
-    if (ref3) {
-      ref3()
+  const _onPressClients = () => {
+    if (onPressClients) {
+      onPressClients()
     }
   }
 
@@ -67,10 +77,10 @@ export const Header: React.FC<HeaderProps> = ({ refs }) => {
         <Image src={StormIllustration} alt="storm" />
       </div>
       <div className="flex gap-x-8 py-2 px-5 2xl:text-xl">
-        <Item label="Sobre nós" onClick={onPressAboutUs} />
-        <Item label="Serviços Oferecidos" onClick={onPressServices} />
-        <Item label="Cases" onClick={onPressCases} />
-        <Item label="Clientes" onClick={onPressClients} />
+        <Item label="Sobre nós" onClick={_onPressAboutUs} />
+        <Item label="Serviços Oferecidos" onClick={_onPressServices} />
+        <Item label="Cases" onClick={_onPressCases} />
+        <Item label="Clientes" onClick={_onPressClients} />
       </div>
     </nav>
   )

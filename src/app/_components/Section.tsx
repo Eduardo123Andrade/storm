@@ -8,7 +8,7 @@ interface SectionProps extends React.PropsWithChildren {
 export const Section = forwardRef<HTMLElement, SectionProps>(
   ({ children, className }, ref) => {
     return (
-      <section ref={ref} className={` h-[80vh] ${className} `}>
+      <section ref={ref} className={` h-[85vh] ${className} `}>
         {children}
       </section>
     )

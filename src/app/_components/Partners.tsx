@@ -1,14 +1,9 @@
-import { Inter, Open_Sans } from "next/font/google"
-import { Section } from "./Section"
+import { Open_Sans } from "next/font/google"
 import Image from "next/image"
+import { forwardRef } from "react"
 import PartnersIllustration from "../../../public/assets/svgs/partners.svg"
 import { Carousel } from "./Carousel"
-
-const inter = Inter({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-})
+import { Section } from "./Section"
 
 const openSans = Open_Sans({
   weight: ["800", "600"],
@@ -16,9 +11,9 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 })
 
-export const Partners = () => {
+export const Partners = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <Section className="mb-80">
+    <Section className="mb-80" ref={ref}>
       <div className="flex flex-col items-center">
         <div className="text-center">
           <h1
@@ -40,4 +35,4 @@ export const Partners = () => {
       <Carousel />
     </Section>
   )
-}
+})

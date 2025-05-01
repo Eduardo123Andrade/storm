@@ -14,6 +14,9 @@
   --color-test1: #041a2b66;
   --color-test2: #115a92;
   --color-test3: #041a2b;
+
+  --color-gradient-start: #051b2c;
+  --color-gradient-end: #115a92a2;
 }
 
 @theme {
