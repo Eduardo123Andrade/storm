@@ -16,6 +16,20 @@
   --color-test3: #041a2b;
 }
 
+@theme {
+  --animate-horizontal-infinity-scroll: horizontal-infinity-scroll 10s linear
+    infinite;
+
+  @keyframes horizontal-infinity-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50%));
+    }
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

@@ -1,4 +1,5 @@
 export { AboutUs } from "./AboutUs"
+export { Carousel } from "./Carousel"
 export { Header } from "./Header"
 export { Intro } from "./Intro"
 export { Section } from "./Section"
