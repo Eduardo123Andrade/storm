@@ -52,7 +52,6 @@ export default function Home() {
 
   return (
     <div className="pt-32 bg-gradient-start">
-      {/* <div className="pt-32 bg-test1"> */}
       <Header
         onPressClients={onPressClients}
         onPressAboutUs={onPressAboutUs}
@@ -64,7 +63,6 @@ export default function Home() {
         <AboutUs ref={ref2} />
         <Services ref={ref3} />
         <Partners ref={ref4} />
-        {/* <Section /> */}
       </div>
     </div>
   )

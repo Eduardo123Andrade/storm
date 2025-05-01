@@ -7,13 +7,12 @@ export const Carousel = () => {
   return (
     <div className="overflow-hidden">
       <ul
-        className="flex gap-10 animate-horizontal-infinity-scroll"
-        style={{
-          width: `${
-            250 * duplicatedSlidesData.length +
-            10 * (duplicatedSlidesData.length - 1)
-          }px`,
-        }}
+        className="
+        flex
+        gap-10
+        [&_img]:max-w-none
+        animate-horizontal-infinity-scroll
+        "
       >
         {duplicatedSlidesData.map((item, index) => (
           <li key={index}>
