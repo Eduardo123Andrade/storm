@@ -25,7 +25,7 @@ export const Services = forwardRef<HTMLElement>((_, ref) => {
   return (
     <Section
       ref={ref}
-      className="flex flex-col gap-12 bg-linear-to-b from-test1 from-50% to-gradient-end"
+      className="flex flex-col justify-end gap-12 bg-linear-to-b from-test1 from-50% to-gradient-end"
     >
       <div className="text-center">
         <h1

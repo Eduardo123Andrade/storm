@@ -14,7 +14,9 @@ const openSans = Open_Sans({
 export const Partners = forwardRef<HTMLElement>((_, ref) => {
   return (
     <Section
-      className="pt-80 mb-80 bg-linear-to-b from-gradient-end from-0% to-test3 to-70%"
+      // className="flex flex-col mb-80 items-center bg-linear-to-b from-gradient-end from-0% to-test3 to-70%"
+      className="pt-12 flex flex-col mb-80 items-center bg-linear-to-b from-gradient-end from-0% to-test3 to-70%"
+      // className="mb-80 bg-linear-to-b from-gradient-end from-0% to-test3 to-70%"
       ref={ref}
     >
       <div className="flex flex-col items-center">
@@ -31,11 +33,13 @@ export const Partners = forwardRef<HTMLElement>((_, ref) => {
           </label>
         </div>
 
-        <div className="py-24">
+        <div className="py-12">
           <Image src={PartnersIllustration} alt="parceiros" />
         </div>
       </div>
-      <Carousel />
+      <div className="">
+        <Carousel />
+      </div>
     </Section>
   )
 })
