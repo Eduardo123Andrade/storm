@@ -19,7 +19,10 @@ export const Intro = forwardRef<HTMLElement>((_, ref) => {
   }
 
   return (
-    <Section ref={ref} className="overflow-hidden flex flex-col justify-end">
+    <Section
+      ref={ref}
+      className="overflow-hidden flex flex-col justify-end px-32 pt-32"
+    >
       <section className="flex justify-between items-center ">
         <div className="flex flex-col gap-5 2xl:gap-10">
           <div>

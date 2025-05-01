@@ -20,7 +20,7 @@ export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <Section
       ref={ref}
-      className="flex justify-center flex-col text-center gap-12 px-48 2xl:px-40"
+      className="flex justify-center flex-col text-center gap-12 px-80 2xl:px-40 pt-32"
     >
       <h1
         className={`${openSans.className} text-5xl 2xl:text-7xl font-extrabold`}

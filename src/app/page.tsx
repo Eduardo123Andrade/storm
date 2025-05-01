@@ -1,6 +1,6 @@
 "use client"
-import { useEffect, useRef } from "react"
-import { Intro, Header, AboutUs, Services } from "./_components"
+import { useRef } from "react"
+import { AboutUs, Carousel, Header, Intro, Services } from "./_components"
 
 const scrollTo = (refElement: HTMLElement) => {
   const navbar = document.querySelector("nav")
@@ -20,7 +20,6 @@ export default function Home() {
 
   const onPressAboutUs = () => {
     if (ref1.current) {
-      console.log("??")
       scrollTo(ref1.current)
     }
   }
@@ -38,13 +37,15 @@ export default function Home() {
   }
 
   return (
-    <div className="px-32 pt-32 bg-gradient-to-b from-test1 from-70% via-test2 via-95% to-test1 to-100%">
+    // <div className="px-32 pt-32 bg-gradient-to-b from-test1 from-70% via-test2 via-95% to-test1 to-100%">
+    <div className="bg-gradient-to-b from-test1 from-70% via-test2 via-95% to-test1 to-100%">
       <Header refs={[onPressAboutUs, onPressServices, onPressCases]} />
       <div className="gap-12 flex flex-col">
         <Intro ref={ref1} />
         <AboutUs ref={ref2} />
         <Services ref={ref3} />
       </div>
+      <Carousel />
     </div>
   )
 }
