@@ -13,7 +13,10 @@ const openSans = Open_Sans({
 
 export const Partners = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <Section className="mb-80" ref={ref}>
+    <Section
+      className="pt-80 mb-80 bg-linear-to-b from-gradient-end from-0% to-test3 to-70%"
+      ref={ref}
+    >
       <div className="flex flex-col items-center">
         <div className="text-center">
           <h1

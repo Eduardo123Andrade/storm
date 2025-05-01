@@ -51,7 +51,7 @@ export default function Home() {
   }
 
   return (
-    <div className="pt-32 bg-test1">
+    <div className="pt-32 bg-gradient-start">
       {/* <div className="pt-32 bg-test1"> */}
       <Header
         onPressClients={onPressClients}
@@ -59,7 +59,7 @@ export default function Home() {
         onPressServices={onPressServices}
         onPressCases={onPressCases}
       />
-      <div className="gap-12 flex flex-col overflow-hidden">
+      <div className="flex flex-col overflow-hidden">
         <Intro ref={ref1} />
         <AboutUs ref={ref2} />
         <Services ref={ref3} />

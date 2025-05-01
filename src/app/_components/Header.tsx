@@ -68,9 +68,7 @@ export const Header: React.FC<HeaderProps> = ({
       items-center
       sticky
       top-0
-      backdrop-brightness-0
-      bg-test1
-      z-2
+      bg-gradient-start
     "
     >
       <div className="py-4">
