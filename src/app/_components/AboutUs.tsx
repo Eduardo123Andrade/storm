@@ -3,6 +3,7 @@ import { Inter, Open_Sans } from "next/font/google"
 import { Results } from "./Results"
 import { Section } from "./Section"
 import { forwardRef } from "react"
+import { AnimatedResults } from "./AnimatedResults"
 
 const inter = Inter({
   weight: ["400"],
@@ -15,6 +16,10 @@ const openSans = Open_Sans({
   style: ["normal"],
   subsets: ["latin"],
 })
+
+const projectsCreated = [20, 40, 60, 80, 100]
+const clientsSatisfied = [10, 20, 30, 40, 50]
+const convertedResults = [35, 45, 55, 65, 75]
 
 export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
   return (
@@ -46,9 +51,26 @@ export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
       </p>
 
       <div className="flex justify-between">
-        <Results quantity="+100" label="Projetos realizados" />
-        <Results quantity="+50" label="Clientes satisfeitos" />
-        <Results quantity="+75%" label="Resultados convertidos" />
+        {/* <Results quantity="+100" label="Projetos realizados" /> */}
+        <AnimatedResults
+          values={projectsCreated}
+          prefix="+"
+          label="Projetos realizados"
+        />
+
+        <AnimatedResults
+          values={clientsSatisfied}
+          prefix="+"
+          label="Clientes satisfeitos"
+          delay
+        />
+
+        <AnimatedResults
+          values={convertedResults}
+          prefix="+"
+          label="Resultados convertidos"
+          suffix="%"
+        />
       </div>
     </Section>
   )
