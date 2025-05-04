@@ -3,6 +3,7 @@ import { Service } from "./Service"
 import { SERVICES } from "../_utils/services"
 import { Service as IService } from "../interfaces"
 import { Section } from "./Section"
+import { forwardRef } from "react"
 
 const openSans = Open_Sans({
   weight: ["800", "600"],
@@ -10,7 +11,7 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 })
 
-export const Services = () => {
+export const Services = forwardRef<HTMLElement>((_, ref) => {
   const renderItem = (item: IService) => {
     return (
       <Service
@@ -22,12 +23,19 @@ export const Services = () => {
     )
   }
   return (
-    <Section className="flex flex-col gap-12">
+    <Section
+      ref={ref}
+      className="flex flex-col justify-end gap-12 bg-linear-to-b from-test1 from-50% to-gradient-end"
+    >
       <div className="text-center">
-        <h1 className={`${openSans.className} text-5xl font-extrabold`}>
+        <h1
+          className={`${openSans.className} text-5xl 2xl:text-6xl font-extrabold`}
+        >
           Seu sucesso começa aqui
         </h1>
-        <p className={`${openSans.className} text-2xl font-semibold`}>
+        <p
+          className={`${openSans.className} text-2xl 2xl:text-3xl 2xl:pt-2 font-semibold`}
+        >
           Da ideia à execução, somos a tempestade que move seu negócio.
         </p>
       </div>
@@ -37,4 +45,4 @@ export const Services = () => {
       </div>
     </Section>
   )
-}
+})

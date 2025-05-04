@@ -1,7 +1,16 @@
+"use client"
+import { forwardRef } from "react"
+
 interface SectionProps extends React.PropsWithChildren {
   className?: string
 }
 
-export const Section: React.FC<SectionProps> = ({ children, className }) => {
-  return <section className={` h-[70vh] ${className} `}>{children}</section>
-}
+export const Section = forwardRef<HTMLElement, SectionProps>(
+  ({ children, className }, ref) => {
+    return (
+      <section ref={ref} className={`min-h-[80hv] ${className} `}>
+        {children}
+      </section>
+    )
+  }
+)

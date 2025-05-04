@@ -15,10 +15,16 @@ const openSans = Open_Sans({
 export const Results: React.FC<ResultsProps> = ({ quantity, label }) => {
   return (
     <div className="text-center">
-      <h1 className={`${openSans.className} text-8xl font-extrabold`}>
+      <h1
+        className={`${openSans.className} text-8xl 2xl:text-9xl font-extrabold`}
+      >
         {quantity}
       </h1>
-      <p className={`${openSans.className} text-2xl font-semibold`}>{label}</p>
+      <p
+        className={`${openSans.className} text-2xl 2xl:text-3xl font-semibold`}
+      >
+        {label}
+      </p>
     </div>
   )
 }

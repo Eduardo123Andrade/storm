@@ -1,6 +1,9 @@
+"use client"
 import { Inter, Open_Sans } from "next/font/google"
 import { Results } from "./Results"
 import { Section } from "./Section"
+import { forwardRef } from "react"
+import { AnimatedResults } from "./AnimatedResults"
 
 const inter = Inter({
   weight: ["400"],
@@ -14,17 +17,28 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 })
 
-export const AboutUs = () => {
+const projectsCreated = [20, 40, 60, 80, 100]
+const clientsSatisfied = [10, 20, 30, 40, 50]
+const convertedResults = [35, 45, 55, 65, 75]
+
+export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
   return (
-    <Section className="flex justify-center flex-col text-center gap-12 px-48">
-      <h1 className={`${openSans.className} text-5xl font-extrabold`}>
-        <span className="underline underline-offset-[14px] decoration-amber-600">
+    <Section
+      ref={ref}
+      className="flex justify-center flex-col text-center gap-12 px-80 2xl:px-40 pt-32"
+    >
+      <h1
+        className={`${openSans.className} text-5xl 2xl:text-7xl font-extrabold`}
+      >
+        <span className="underline underline-offset-[14px] 2xl:underline-offset-[20px] decoration-amber-600">
           Impulsione
         </span>{" "}
         sua marca
       </h1>
 
-      <p className={`${inter.className} px-60 text-left text-2xl font-normal`}>
+      <p
+        className={`${inter.className} 2xl:px-34 text-left text-2xl 2xl:text-3xl font-normal`}
+      >
         Unimos criatividade e tecnologia para criar estratégias inovadoras em
         marketing digital, design, audiovisual e tecnologia. Cada projeto é um
         desafio que encaramos com ousadia, sempre buscando o equilíbrio perfeito
@@ -36,11 +50,28 @@ export const AboutUs = () => {
         inovação no seu negócio.
       </p>
 
-      <div className="grid grid-cols-3">
-        <Results quantity="+100" label="Projetos realizados" />
-        <Results quantity="+50" label="Clientes satisfeitos" />
-        <Results quantity="+75%" label="Resultados convertidos" />
+      <div className="flex justify-between">
+        {/* <Results quantity="+100" label="Projetos realizados" /> */}
+        <AnimatedResults
+          values={projectsCreated}
+          prefix="+"
+          label="Projetos realizados"
+        />
+
+        <AnimatedResults
+          values={clientsSatisfied}
+          prefix="+"
+          label="Clientes satisfeitos"
+          delay
+        />
+
+        <AnimatedResults
+          values={convertedResults}
+          prefix="+"
+          label="Resultados convertidos"
+          suffix="%"
+        />
       </div>
     </Section>
   )
-}
+})
