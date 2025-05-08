@@ -22,7 +22,7 @@ export const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
 
   return (
     <button
-      className="py-2.5 px-2 rounded-2xl bg-[#FF4E17] hover:cursor-pointer focus:border-0 flex items-center gap-2"
+      className="py-2.5 px-2 rounded-2xl bg-storm-orange hover:cursor-pointer focus:border-0 flex items-center gap-2"
       onClick={_onPress}
     >
       <label

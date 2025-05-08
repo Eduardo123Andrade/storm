@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google"
 import StormIllustration from "../../../public/assets/svgs/storm.svg"
 import Image from "next/image"
-import { RefAttributes, useMemo } from "react"
 
 const inter = Inter({
   weight: ["500"],
@@ -14,6 +13,7 @@ interface HeaderProps {
   onPressServices: () => void
   onPressCases: () => void
   onPressClients: () => void
+  onPressHome: () => void
 }
 
 interface ItemProps {
@@ -22,7 +22,7 @@ interface ItemProps {
 }
 const Item: React.FC<ItemProps> = ({ label, onClick }) => (
   <label
-    className={`${inter.className} rounded-md hover:bg-[#FF4E17] cursor-pointer py-1 px-2 select-none`}
+    className={`${inter.className} rounded-md hover:bg-storm-orange cursor-pointer py-1 px-2 select-none`}
     onClick={onClick}
   >
     {label}
@@ -34,7 +34,12 @@ export const Header: React.FC<HeaderProps> = ({
   onPressCases,
   onPressClients,
   onPressServices,
+  onPressHome,
 }) => {
+  const _onPressHome = () => {
+    if (onPressHome) onPressHome()
+  }
+
   const _onPressAboutUs = () => {
     if (onPressAboutUs) {
       onPressAboutUs()
@@ -69,9 +74,11 @@ export const Header: React.FC<HeaderProps> = ({
       sticky
       top-0
       bg-gradient-start
+      pb-2
+      pt-8
     "
     >
-      <div className="">
+      <div className="cursor-pointer" onClick={_onPressHome}>
         <Image src={StormIllustration} alt="storm" />
       </div>
       <div className="gap-x-8 px-5 2xl:text-xl">

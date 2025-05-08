@@ -30,7 +30,7 @@ export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
       <h1
         className={`${openSans.className} text-5xl 2xl:text-7xl font-extrabold`}
       >
-        <span className="underline underline-offset-[14px] 2xl:underline-offset-[20px] decoration-amber-600">
+        <span className="underline underline-offset-[14px] 2xl:underline-offset-[20px] decoration-storm-orange">
           Impulsione
         </span>{" "}
         sua marca
@@ -50,7 +50,8 @@ export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
         inovação no seu negócio.
       </p>
 
-      <div className="flex justify-between">
+      {/* TODO - ajustar o px para tela menores */}
+      <div className="flex justify-between 2xl:px-34">
         {/* <Results quantity="+100" label="Projetos realizados" /> */}
         <AnimatedResults
           values={projectsCreated}
