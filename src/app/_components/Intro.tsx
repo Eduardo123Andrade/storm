@@ -3,7 +3,8 @@
 import { Open_Sans } from "next/font/google"
 import { Button } from "./Button"
 import Image from "next/image"
-import TVImage from "../../../public/assets/images/tvs.png"
+import TVImage from "../../../public/assets/images/tvs3.png"
+// import TVImage from "../../../public/assets/gifs/tvs.gif"
 import { Section } from "./Section"
 import { forwardRef } from "react"
 
@@ -21,18 +22,17 @@ export const Intro = forwardRef<HTMLElement>((_, ref) => {
   return (
     <Section
       ref={ref}
-      className="overflow-hidden flex flex-col justify-end px-32 pt-32"
+      // className="overflow-hidden flex flex-col justify-end px-32 pt-32"
+      className="flex flex-col justify-center px-32"
     >
-      <section className="flex justify-between items-center ">
+      <section className="flex justify-between items-center">
         <div className="flex flex-col gap-5 2xl:gap-10">
           <div>
             <h1
-              className={`${openSans.className} text-5xl 2xl:text-6xl font-extrabold`}
+              className={`${openSans.className} leading-16 text-5xl 2xl:text-6xl font-extrabold`}
             >
-              Mais do que uma agência,
-              <br />
-              somos uma{" "}
-              <span className="text-[#FF4E17]">
+              Mais do que uma agência, somos uma{" "}
+              <span className="text-storm-orange">
                 tempestade
                 <br />
               </span>

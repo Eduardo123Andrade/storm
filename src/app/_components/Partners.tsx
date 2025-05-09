@@ -2,6 +2,10 @@ import { Open_Sans } from "next/font/google"
 import Image from "next/image"
 import { forwardRef } from "react"
 import PartnersIllustration from "../../../public/assets/svgs/partners.svg"
+import DuPOVOIllustration from "../../../public/assets/images/DuPOVO.png"
+import InsanosIllustration from "../../../public/assets/images/Insanos.png"
+import SUpermercadoIllustration from "../../../public/assets/images/SUpermercado.png"
+import EdAdventistaIllustration from "../../../public/assets/images/Educação Adventista.png"
 import { Carousel } from "./Carousel"
 import { Section } from "./Section"
 
@@ -40,9 +44,12 @@ export const Partners = forwardRef<HTMLElement>((_, ref) => {
             <span className="text-[#E74E13]">Storm Studio.</span>
           </label>
         </div>
-
-        <div className="py-12">
-          <Image src={PartnersIllustration} alt="parceiros" />
+        {/* Images - good lock */}
+        <div className="py-12 grid max-lg:grid max-lg:grid-cols-1 grid-cols-2 grid-rows-2 gap-9">
+          <Image src={InsanosIllustration} alt="Insanos" />
+          <Image src={EdAdventistaIllustration} alt="Educação Adventista" />
+          <Image src={DuPOVOIllustration} alt="DuPovo" />
+          <Image src={SUpermercadoIllustration} alt="Preço Bom" />
         </div>
       </div>
       <div className="py-6">
