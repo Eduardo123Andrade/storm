@@ -1,7 +1,7 @@
 "use client"
 
 import { Open_Sans } from "next/font/google"
-import { Button } from "../Button"
+import { RedirectButton } from "../RedirectButton"
 import Image from "next/image"
 import TVImage from "../../../../public/assets/images/tvs3.png"
 // import TVImage from "../../../public/assets/gifs/tvs.gif"
@@ -49,7 +49,7 @@ export const Intro = forwardRef<HTMLElement>((_, ref) => {
           </p>
 
           <div>
-            <Button label="Transforme seu negócio" onClick={onClick} />
+            <RedirectButton label="Transforme seu negócio" />
           </div>
         </div>
 

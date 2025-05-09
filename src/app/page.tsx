@@ -5,6 +5,7 @@ import {
   Header,
   Intro,
   ITSolution,
+  MoreResults,
   Partners,
   Section,
   Services,
@@ -75,6 +76,7 @@ export default function Home() {
           <Services ref={refServices} />
           <ITSolution ref={itSolutions} />
           <Partners ref={ref4} />
+          <MoreResults />
         </div>
       </div>
     </>

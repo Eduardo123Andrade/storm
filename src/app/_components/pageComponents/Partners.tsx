@@ -2,10 +2,10 @@ import { Open_Sans } from "next/font/google"
 import Image from "next/image"
 import { forwardRef } from "react"
 import PartnersIllustration from "../../../public/assets/svgs/partners.svg"
-import DuPOVOIllustration from "../../../public/assets/images/DuPOVO.png"
-import InsanosIllustration from "../../../public/assets/images/Insanos.png"
-import SUpermercadoIllustration from "../../../public/assets/images/SUpermercado.png"
-import EdAdventistaIllustration from "../../../public/assets/images/Educação Adventista.png"
+import DuPOVOIllustration from "../../../../public/assets/images/DuPOVO.png"
+import InsanosIllustration from "../../../../public/assets/images/Insanos.png"
+import SUpermercadoIllustration from "../../../../public/assets/images/SUpermercado.png"
+import EdAdventistaIllustration from "../../../../public/assets/images/Educação Adventista.png"
 import { Carousel } from "../Carousel"
 import { Section } from "../Section"
 
@@ -23,12 +23,6 @@ export const Partners = forwardRef<HTMLElement>((_, ref) => {
         pt-12
         flex
         flex-col
-        mb-80
-        bg-linear-to-b 
-        from-gradient-end 
-        from-0%
-        to-test3
-        to-70%
       "
     >
       <div className="flex flex-col items-center">
@@ -52,6 +46,7 @@ export const Partners = forwardRef<HTMLElement>((_, ref) => {
           <Image src={SUpermercadoIllustration} alt="Preço Bom" />
         </div>
       </div>
+
       <div className="py-6">
         <Carousel />
       </div>

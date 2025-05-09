@@ -1,7 +1,7 @@
 import Image from "next/image"
 import StormIllustration from "../../../public/assets/svgs/storm.svg"
 import { Open_Sans } from "next/font/google"
-import { Button } from "../../_components/Button"
+import { Button } from "../../_components/RedirectButton"
 
 const openSans = Open_Sans({
   weight: ["700"],

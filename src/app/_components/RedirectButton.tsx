@@ -5,7 +5,6 @@ import Image from "next/image"
 
 interface ButtonProps {
   label: string
-  onClick: () => void
   rightIcon?: any
 }
 
@@ -16,12 +15,12 @@ const inter = Inter({
 })
 
 // const PHONE_NUMBER = "558186487809"
-const PHONE_NUMBER = "558183656723"
+const PHONE_NUMBER = "5581998194658"
 
 const URL = `https://wa.me/${PHONE_NUMBER}?text=olar, eu sou um teste de redirecionamento`
 // const URL = `https://web.whatsapp.com/send?phone=${PHONE_NUMBER}&text=olar, eu sou um teste de redirecionamento`
 
-export const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+export const RedirectButton: React.FC<ButtonProps> = ({ label }) => {
   const _onPress = () => {
     window.open(URL)
   }
