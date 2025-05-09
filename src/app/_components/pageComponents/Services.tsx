@@ -1,8 +1,8 @@
 import { Open_Sans } from "next/font/google"
-import { Service } from "./Service"
-import { SERVICES } from "../_utils/services"
-import { Service as IService } from "../interfaces"
-import { Section } from "./Section"
+import { Service } from "../Service"
+import { SERVICES } from "../../_utils/services"
+import { Service as IService } from "../../interfaces"
+import { Section } from "../Section"
 import { forwardRef } from "react"
 
 const openSans = Open_Sans({

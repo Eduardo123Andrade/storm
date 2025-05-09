@@ -1,8 +1,8 @@
 "use client"
 import { Inter, Open_Sans } from "next/font/google"
-import { Section } from "./Section"
+import { Section } from "../Section"
 import { forwardRef } from "react"
-import { AnimatedResults } from "./AnimatedResults"
+import { AnimatedResults } from "../AnimatedResults"
 
 const inter = Inter({
   weight: ["400"],

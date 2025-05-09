@@ -6,8 +6,8 @@ import DuPOVOIllustration from "../../../public/assets/images/DuPOVO.png"
 import InsanosIllustration from "../../../public/assets/images/Insanos.png"
 import SUpermercadoIllustration from "../../../public/assets/images/SUpermercado.png"
 import EdAdventistaIllustration from "../../../public/assets/images/Educação Adventista.png"
-import { Carousel } from "./Carousel"
-import { Section } from "./Section"
+import { Carousel } from "../Carousel"
+import { Section } from "../Section"
 
 const openSans = Open_Sans({
   weight: ["800", "600"],
