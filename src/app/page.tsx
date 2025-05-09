@@ -4,6 +4,7 @@ import {
   AboutUs,
   Header,
   Intro,
+  ITSolution,
   Partners,
   Section,
   Services,
@@ -24,7 +25,7 @@ export default function Home() {
   const refStorm = useRef<HTMLElement>(null)
   const refAboutUs = useRef<HTMLElement>(null)
   const refServices = useRef<HTMLElement>(null)
-  const ref3 = useRef<HTMLElement>(null)
+  const itSolutions = useRef<HTMLElement>(null)
   const ref4 = useRef<HTMLElement>(null)
 
   const onPressHome = () => {
@@ -45,9 +46,9 @@ export default function Home() {
     }
   }
 
-  const onPressCases = () => {
-    if (ref3.current) {
-      scrollTo(ref3.current)
+  const onPressITSolutions = () => {
+    if (itSolutions.current) {
+      scrollTo(itSolutions.current)
     }
   }
 
@@ -66,12 +67,13 @@ export default function Home() {
           onPressClients={onPressClients}
           onPressAboutUs={onPressAboutUs}
           onPressServices={onPressServices}
-          onPressCases={onPressCases}
+          onPressITSolutions={onPressITSolutions}
         />
         <div className="flex flex-col overflow-hidden">
           <Intro ref={refStorm} />
           <AboutUs ref={refAboutUs} />
           <Services ref={refServices} />
+          <ITSolution ref={itSolutions} />
           <Partners ref={ref4} />
         </div>
       </div>

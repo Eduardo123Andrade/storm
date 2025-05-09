@@ -15,9 +15,15 @@ const inter = Inter({
   subsets: ["latin"],
 })
 
+// const PHONE_NUMBER = "558186487809"
+const PHONE_NUMBER = "558183656723"
+
+const URL = `https://wa.me/${PHONE_NUMBER}?text=olar, eu sou um teste de redirecionamento`
+// const URL = `https://web.whatsapp.com/send?phone=${PHONE_NUMBER}&text=olar, eu sou um teste de redirecionamento`
+
 export const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   const _onPress = () => {
-    onClick()
+    window.open(URL)
   }
 
   return (

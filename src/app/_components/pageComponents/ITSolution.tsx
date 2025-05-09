@@ -1,11 +1,11 @@
 import { forwardRef } from "react"
-import { SERVICES } from "../../_utils/services"
-import { Service as IService } from "../../interfaces"
 import { SectionHeader } from "../HeaderSection"
 import { Section } from "../Section"
 import { Service } from "../Service"
+import { Service as IService } from "../../interfaces"
+import { IT_SOLUTIONS } from "@/app/_utils"
 
-export const Services = forwardRef<HTMLElement>((_, ref) => {
+export const ITSolution = forwardRef<HTMLElement>((_, ref) => {
   const renderItem = (item: IService) => {
     return (
       <Service
@@ -13,14 +13,22 @@ export const Services = forwardRef<HTMLElement>((_, ref) => {
         title={item.title}
         description={item.description}
         icon={item.image}
-        className="bg-storm-dark-blue"
+        className="bg-storm-light-blue"
       />
     )
   }
+
   return (
     <Section
       ref={ref}
-      className="flex flex-col justify-end gap-12 bg-linear-to-b from-test1 from-50% to-gradient-end"
+      className="
+        pt-12
+        bg-linear-to-b 
+        from-gradient-end 
+        from-0%
+        to-test3
+        to-20%
+      "
     >
       <div
         className="
@@ -35,15 +43,15 @@ export const Services = forwardRef<HTMLElement>((_, ref) => {
 
         <div
           className="
-          grid
-          grid-cols-3
-          gap-12
-          max-xl:grid-cols-1
-          self-center
-          pt-12 
-      "
+            grid
+            grid-cols-3
+            gap-12
+            max-xl:grid-cols-1
+            self-center
+            pt-12 
+          "
         >
-          {SERVICES.map(renderItem)}
+          {IT_SOLUTIONS.map(renderItem)}
         </div>
       </div>
     </Section>

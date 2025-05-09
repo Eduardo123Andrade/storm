@@ -1,4 +1,5 @@
 export { AboutUs } from "./AboutUs"
+export { ITSolution } from "./ITSolution"
 export { Intro } from "./Intro"
 export { Partners } from "./Partners"
 export { Services } from "./Services"

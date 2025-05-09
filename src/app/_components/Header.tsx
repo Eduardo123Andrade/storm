@@ -11,7 +11,7 @@ const inter = Inter({
 interface HeaderProps {
   onPressAboutUs: () => void
   onPressServices: () => void
-  onPressCases: () => void
+  onPressITSolutions: () => void
   onPressClients: () => void
   onPressHome: () => void
 }
@@ -31,7 +31,7 @@ const Item: React.FC<ItemProps> = ({ label, onClick }) => (
 
 export const Header: React.FC<HeaderProps> = ({
   onPressAboutUs,
-  onPressCases,
+  onPressITSolutions,
   onPressClients,
   onPressServices,
   onPressHome,
@@ -52,9 +52,11 @@ export const Header: React.FC<HeaderProps> = ({
     }
   }
 
-  const _onPressCases = () => {
-    if (onPressCases) {
-      onPressCases()
+  const _onPressITSolutions = () => {
+    console.log("??")
+    if (onPressITSolutions) {
+      console.log("!!")
+      onPressITSolutions()
     }
   }
 
@@ -85,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="gap-x-8 px-5 2xl:text-xl">
         <Item label="Sobre nós" onClick={_onPressAboutUs} />
         <Item label="Serviços Oferecidos" onClick={_onPressServices} />
-        <Item label="Cases" onClick={_onPressCases} />
+        <Item label="Soluções em TI" onClick={_onPressITSolutions} />
         <Item label="Clientes" onClick={_onPressClients} />
       </div>
     </nav>
