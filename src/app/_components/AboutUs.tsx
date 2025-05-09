@@ -1,6 +1,5 @@
 "use client"
 import { Inter, Open_Sans } from "next/font/google"
-import { Results } from "./Results"
 import { Section } from "./Section"
 import { forwardRef } from "react"
 import { AnimatedResults } from "./AnimatedResults"
@@ -25,10 +24,10 @@ export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <Section
       ref={ref}
-      className="flex justify-center flex-col text-center gap-12 px-80 2xl:px-40 pt-32"
+      className="flex justify-center flex-col text-center gap-12  pt-32"
     >
       <h1
-        className={`${openSans.className} text-5xl 2xl:text-7xl font-extrabold`}
+        className={`${openSans.className}  text-5xl 2xl:text-7xl font-extrabold`}
       >
         <span className="underline underline-offset-[14px] 2xl:underline-offset-[20px] decoration-storm-orange">
           Impulsione
@@ -37,7 +36,7 @@ export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
       </h1>
 
       <p
-        className={`${inter.className} 2xl:px-34 text-left text-2xl 2xl:text-3xl font-normal`}
+        className={`${inter.className} px-20 xl:px-80 2xl:px-40 text-left text-2xl 2xl:text-3xl font-normal`}
       >
         Unimos criatividade e tecnologia para criar estratégias inovadoras em
         marketing digital, design, audiovisual e tecnologia. Cada projeto é um
@@ -50,9 +49,7 @@ export const AboutUs = forwardRef<HTMLElement>((_props, ref) => {
         inovação no seu negócio.
       </p>
 
-      {/* TODO - ajustar o px para tela menores */}
-      <div className="flex justify-between 2xl:px-34">
-        {/* <Results quantity="+100" label="Projetos realizados" /> */}
+      <div className="flex justify-between px-56 2xl:px-34 gap-6 max-xl:flex-col max-xl:gap-10">
         <AnimatedResults
           values={projectsCreated}
           prefix="+"

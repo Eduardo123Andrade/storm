@@ -76,6 +76,7 @@ export const Header: React.FC<HeaderProps> = ({
       bg-gradient-start
       pb-2
       pt-8
+      z-1
     "
     >
       <div className="cursor-pointer" onClick={_onPressHome}>

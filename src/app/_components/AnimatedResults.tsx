@@ -65,13 +65,13 @@ export const AnimatedResults: React.FC<AnimatedResultsProps> = ({
   console.log({ animatedClass })
 
   return (
-    <div ref={containerRef} className="text-center">
-      <div className="flex items-center gap-6 text-8xl 2xl:text-9xl font-extrabold">
+    <div ref={containerRef} className="flex flex-col items-center">
+      <div className="flex items-center gap-3 text-8xl 2xl:text-9xl font-extrabold">
         {prefix}
         <div className=" h-[96px] 2xl:h-[128px] overflow-hidden">
           <ul className={`flex flex-col gap-2 ${animatedClass}`}>
             {values.map((item, index) => (
-              <li key={`${index}`} className={`${openSans.className}`}>
+              <li key={`${index}`} className={`${openSans.className} z-[-1]`}>
                 {item}
               </li>
             ))}
