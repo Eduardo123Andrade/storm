@@ -34,7 +34,7 @@ export const Partners = forwardRef<HTMLElement>((_, ref) => {
       <div className="flex flex-col items-center">
         <div className="text-center">
           <h1
-            className={`${openSans.className} text-5xl 2xl:text-6xl font-extrabold mb-2`}
+            className={`${openSans.className}max-xl:px-2 text-5xl 2xl:text-6xl font-extrabold mb-2`}
           >
             Credibilidade que fala por si.
           </h1>
@@ -45,7 +45,7 @@ export const Partners = forwardRef<HTMLElement>((_, ref) => {
           </label>
         </div>
         {/* Images - good lock */}
-        <div className="py-12 grid max-lg:grid max-lg:grid-cols-1 grid-cols-2 grid-rows-2 gap-9">
+        <div className="p-12 grid max-lg:grid max-lg:grid-cols-1 grid-cols-2 grid-rows-2 gap-9">
           <Image src={InsanosIllustration} alt="Insanos" />
           <Image src={EdAdventistaIllustration} alt="Educação Adventista" />
           <Image src={DuPOVOIllustration} alt="DuPovo" />

@@ -21,20 +21,27 @@ const scrollTo = (refElement: HTMLElement) => {
 }
 
 export default function Home() {
-  const ref1 = useRef<HTMLElement>(null)
-  const ref2 = useRef<HTMLElement>(null)
+  const refStorm = useRef<HTMLElement>(null)
+  const refAboutUs = useRef<HTMLElement>(null)
+  const refServices = useRef<HTMLElement>(null)
   const ref3 = useRef<HTMLElement>(null)
   const ref4 = useRef<HTMLElement>(null)
 
+  const onPressHome = () => {
+    if (refStorm.current) {
+      scrollTo(refStorm.current)
+    }
+  }
+
   const onPressAboutUs = () => {
-    if (ref1.current) {
-      scrollTo(ref1.current)
+    if (refAboutUs.current) {
+      scrollTo(refAboutUs.current)
     }
   }
 
   const onPressServices = () => {
-    if (ref2.current) {
-      scrollTo(ref2.current)
+    if (refServices.current) {
+      scrollTo(refServices.current)
     }
   }
 
@@ -51,19 +58,23 @@ export default function Home() {
   }
 
   return (
-    <div className="pt-32 bg-gradient-start">
-      <Header
-        onPressClients={onPressClients}
-        onPressAboutUs={onPressAboutUs}
-        onPressServices={onPressServices}
-        onPressCases={onPressCases}
-      />
-      <div className="flex flex-col overflow-hidden">
-        <Intro ref={ref1} />
-        <AboutUs ref={ref2} />
-        <Services ref={ref3} />
-        <Partners ref={ref4} />
+    <>
+      {/* <FirstPage /> */}
+      <div className="pt-8 bg-test3">
+        <Header
+          onPressHome={onPressHome}
+          onPressClients={onPressClients}
+          onPressAboutUs={onPressAboutUs}
+          onPressServices={onPressServices}
+          onPressCases={onPressCases}
+        />
+        <div className="flex flex-col overflow-hidden">
+          <Intro ref={refStorm} />
+          <AboutUs ref={refAboutUs} />
+          <Services ref={refServices} />
+          <Partners ref={ref4} />
+        </div>
       </div>
-    </div>
+    </>
   )
 }

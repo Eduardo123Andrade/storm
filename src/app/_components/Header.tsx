@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <nav
       className="
-      px-32
+      px-16
       flex
       justify-between
       items-center

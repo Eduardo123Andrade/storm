@@ -40,7 +40,7 @@ export const Services = forwardRef<HTMLElement>((_, ref) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 space-x-6 space-y-6 self-center">
+      <div className="grid grid-cols-3 max-xl:grid-cols-1 space-x-6 space-y-6 self-center">
         {SERVICES.map(renderItem)}
       </div>
     </Section>
