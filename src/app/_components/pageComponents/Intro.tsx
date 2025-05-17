@@ -17,9 +17,9 @@ export const Intro = forwardRef<HTMLElement>((_, ref) => {
   return (
     <Section
       ref={ref}
-      className="flex flex-col justify-center px-32 max-mobile:px-16"
+      className="flex flex-col justify-center px-32 max-mobile:px-16 max-mobile:pt-8"
     >
-      <div className="flex justify-between items-center max-mobile:flex-col-reverse">
+      <div className="flex justify-between items-center">
         <div className="flex flex-col gap-5 2xl:gap-10">
           <div>
             <h1
@@ -50,7 +50,7 @@ export const Intro = forwardRef<HTMLElement>((_, ref) => {
         <div
           className="
             flex
-            max-mobile:justify-evenly
+            max-mobile:hidden
           "
         >
           <Image
