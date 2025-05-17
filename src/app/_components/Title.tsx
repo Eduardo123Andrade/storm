@@ -13,7 +13,7 @@ const openSans = Open_Sans({
 export const Title: React.FC<TitleProps> = ({ title }) => {
   return (
     <h1
-      className={`${openSans.className} text-5xl 2xl:text-6xl font-extrabold`}
+      className={`${openSans.className} text-5xl 2xl:text-6xl font-extrabold max-mobile:text-3xl`}
     >
       {title}
     </h1>

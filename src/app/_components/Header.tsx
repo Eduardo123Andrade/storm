@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="cursor-pointer" onClick={_onPressHome}>
         <Image src={StormIllustration} alt="storm" />
       </div>
-      <div className="gap-x-8 px-5 2xl:text-xl">
+      <div className="gap-x-8 px-5 2xl:text-xl max-mobile:hidden">
         <Item label="Sobre nós" onClick={_onPressAboutUs} />
         <Item label="Serviços Oferecidos" onClick={_onPressServices} />
         <Item label="Soluções em TI" onClick={_onPressITSolutions} />

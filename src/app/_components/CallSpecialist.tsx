@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export const CallSpecialist = () => {
   return (
-    <div className="flex justify-between px-32">
+    <div className="flex justify-between px-32 max-mobile:px-8">
       <div className="flex flex-col gap-6">
         <Title title="Quer mais resultado para o seu negócio?" />
         <div>
