@@ -4,8 +4,9 @@ import {
   AboutUs,
   Header,
   Intro,
+  ITSolution,
+  MoreResults,
   Partners,
-  Section,
   Services,
 } from "./_components"
 
@@ -21,26 +22,33 @@ const scrollTo = (refElement: HTMLElement) => {
 }
 
 export default function Home() {
-  const ref1 = useRef<HTMLElement>(null)
-  const ref2 = useRef<HTMLElement>(null)
-  const ref3 = useRef<HTMLElement>(null)
+  const refStorm = useRef<HTMLElement>(null)
+  const refAboutUs = useRef<HTMLElement>(null)
+  const refServices = useRef<HTMLElement>(null)
+  const itSolutions = useRef<HTMLElement>(null)
   const ref4 = useRef<HTMLElement>(null)
 
+  const onPressHome = () => {
+    if (refStorm.current) {
+      scrollTo(refStorm.current)
+    }
+  }
+
   const onPressAboutUs = () => {
-    if (ref1.current) {
-      scrollTo(ref1.current)
+    if (refAboutUs.current) {
+      scrollTo(refAboutUs.current)
     }
   }
 
   const onPressServices = () => {
-    if (ref2.current) {
-      scrollTo(ref2.current)
+    if (refServices.current) {
+      scrollTo(refServices.current)
     }
   }
 
-  const onPressCases = () => {
-    if (ref3.current) {
-      scrollTo(ref3.current)
+  const onPressITSolutions = () => {
+    if (itSolutions.current) {
+      scrollTo(itSolutions.current)
     }
   }
 
@@ -51,19 +59,24 @@ export default function Home() {
   }
 
   return (
-    <div className="pt-32 bg-gradient-start">
-      <Header
-        onPressClients={onPressClients}
-        onPressAboutUs={onPressAboutUs}
-        onPressServices={onPressServices}
-        onPressCases={onPressCases}
-      />
-      <div className="flex flex-col overflow-hidden">
-        <Intro ref={ref1} />
-        <AboutUs ref={ref2} />
-        <Services ref={ref3} />
-        <Partners ref={ref4} />
+    <>
+      <div className="pt-8 bg-test3">
+        <Header
+          onPressHome={onPressHome}
+          onPressClients={onPressClients}
+          onPressAboutUs={onPressAboutUs}
+          onPressServices={onPressServices}
+          onPressITSolutions={onPressITSolutions}
+        />
+        <div className="flex flex-col overflow-hidden">
+          <Intro ref={refStorm} />
+          <AboutUs ref={refAboutUs} />
+          <Services ref={refServices} />
+          <ITSolution ref={itSolutions} />
+          <Partners ref={ref4} />
+          <MoreResults />
+        </div>
       </div>
-    </div>
+    </>
   )
 }

@@ -9,8 +9,15 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
+const data = compat.extends("next/core-web-vitals", "next/typescript")
+data.push({
+  rules: {
+    'react/display-name': 'off'
+  }
+})
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  // ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...data,
 ];
 
 export default eslintConfig;

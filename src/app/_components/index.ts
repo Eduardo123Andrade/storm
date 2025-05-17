@@ -1,7 +1,7 @@
-export { AboutUs } from "./AboutUs"
+export { Title } from "./Title"
 export { Carousel } from "./Carousel"
 export { Header } from "./Header"
-export { Intro } from "./Intro"
 export { Section } from "./Section"
-export { Services } from "./Services"
-export { Partners } from "./Partners"
+export { SectionHeader } from "./HeaderSection"
+
+export * from "./pageComponents"
