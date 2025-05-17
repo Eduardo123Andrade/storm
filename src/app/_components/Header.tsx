@@ -53,9 +53,7 @@ export const Header: React.FC<HeaderProps> = ({
   }
 
   const _onPressITSolutions = () => {
-    console.log("??")
     if (onPressITSolutions) {
-      console.log("!!")
       onPressITSolutions()
     }
   }

@@ -28,7 +28,7 @@ export const Partners = forwardRef<HTMLElement>((_, ref) => {
       <div className="flex flex-col items-center">
         <div className="text-center">
           <h1
-            className={`${openSans.className}max-xl:px-2 text-5xl 2xl:text-6xl font-extrabold mb-2`}
+            className={`${openSans.className} max-xl:px-2 text-5xl 2xl:text-6xl font-extrabold mb-2 `}
           >
             Credibilidade que fala por si.
           </h1>

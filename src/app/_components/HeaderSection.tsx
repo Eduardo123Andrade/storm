@@ -21,7 +21,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     <div className="text-center">
       <Title title={title} />
       <p
-        className={`${openSans.className} text-2xl 2xl:text-3xl 2xl:pt-2 font-semibold`}
+        className={`${openSans.className} text-2xl 2xl:text-3xl pt-2 font-semibold max-mobile:px-6`}
       >
         {subtitle}
       </p>
