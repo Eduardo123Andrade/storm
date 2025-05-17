@@ -1,0 +1,7 @@
+export { AboutUs } from "./AboutUs"
+export { CallSpecialist } from "../CallSpecialist"
+export { ITSolution } from "./ITSolution"
+export { Intro } from "./Intro"
+export { MoreResults } from "./MoreResults"
+export { Partners } from "./Partners"
+export { Services } from "./Services"
