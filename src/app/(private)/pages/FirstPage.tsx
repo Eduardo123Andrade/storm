@@ -1,7 +1,7 @@
 import Image from "next/image"
 import StormIllustration from "../../../public/assets/svgs/storm.svg"
 import { Open_Sans } from "next/font/google"
-import { Button } from "../../_components/RedirectButton"
+import { RedirectButton } from "../../_components/RedirectButton"
 
 const openSans = Open_Sans({
   weight: ["700"],
@@ -10,8 +10,6 @@ const openSans = Open_Sans({
 })
 
 export const FirstPage = () => {
-  const onClick = () => {}
-
   return (
     <div
       className="
@@ -57,7 +55,7 @@ export const FirstPage = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <Button label="Transforme seu negócio" onClick={onClick} />
+          <RedirectButton label="Transforme seu negócio" />
         </div>
       </div>
     </div>

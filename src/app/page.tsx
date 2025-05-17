@@ -7,7 +7,6 @@ import {
   ITSolution,
   MoreResults,
   Partners,
-  Section,
   Services,
 } from "./_components"
 
@@ -61,7 +60,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <FirstPage /> */}
       <div className="pt-8 bg-test3">
         <Header
           onPressHome={onPressHome}

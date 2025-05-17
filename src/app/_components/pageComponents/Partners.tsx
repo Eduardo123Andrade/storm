@@ -1,11 +1,10 @@
 import { Open_Sans } from "next/font/google"
 import Image from "next/image"
 import { forwardRef } from "react"
-import PartnersIllustration from "../../../public/assets/svgs/partners.svg"
 import DuPOVOIllustration from "../../../../public/assets/images/DuPOVO.png"
+import EdAdventistaIllustration from "../../../../public/assets/images/Educação Adventista.png"
 import InsanosIllustration from "../../../../public/assets/images/Insanos.png"
 import SUpermercadoIllustration from "../../../../public/assets/images/SUpermercado.png"
-import EdAdventistaIllustration from "../../../../public/assets/images/Educação Adventista.png"
 import { Carousel } from "../Carousel"
 import { Section } from "../Section"
 

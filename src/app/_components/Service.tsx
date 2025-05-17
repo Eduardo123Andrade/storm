@@ -1,10 +1,11 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props"
 import { Inter } from "next/font/google"
 import Image from "next/image"
-import React, { SVGProps } from "react"
+import React from "react"
 
 interface ServiceProps {
   title: string
-  icon: any
+  icon: StaticImport
   description: string
   className?: string
 }

@@ -17,6 +17,7 @@ export const Services = forwardRef<HTMLElement>((_, ref) => {
       />
     )
   }
+
   return (
     <Section
       ref={ref}

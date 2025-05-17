@@ -33,11 +33,13 @@ export const AnimatedResults: React.FC<AnimatedResultsProps> = ({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            containerRef.current
-              .querySelector("ul")
-              .classList.add("animate-vertical-result-scroll-once")
-            setHasAnimated(true)
+          if (entry.isIntersecting && !hasAnimated && containerRef.current) {
+            const ulElement = containerRef.current.querySelector("ul")
+
+            if (ulElement) {
+              ulElement.classList.add("animate-vertical-result-scroll-once")
+              setHasAnimated(true)
+            }
           }
         })
       },
@@ -53,16 +55,13 @@ export const AnimatedResults: React.FC<AnimatedResultsProps> = ({
         observer.unobserve(containerRef.current)
       }
     }
-  }, [hasAnimated, containerRef])
+  }, [hasAnimated, containerRef.current])
 
   const animatedClass = hasAnimated
     ? delay
       ? "animate-vertical-result-scroll-medium-delay 2xl:animate-vertical-result-scroll-large-delay"
       : `animate-vertical-result-scroll-medium 2xl:animate-vertical-result-scroll-large`
-    : // `animate-vertical-result-scroll-large-2`
-      ""
-
-  console.log({ animatedClass })
+    : ""
 
   return (
     <div ref={containerRef} className="flex flex-col items-center">

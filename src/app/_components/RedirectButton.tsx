@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 
 interface ButtonProps {
   label: string
-  rightIcon?: any
 }
 
 const inter = Inter({
@@ -26,7 +25,7 @@ export const RedirectButton: React.FC<ButtonProps> = ({ label }) => {
 
   useEffect(() => {
     if (!url) {
-      const { innerWidth } = window
+      const { innerWidth } = window as Window
       const URL =
         innerWidth <= MOBILE_WIDTH
           ? `https://wa.me/${PHONE_NUMBER}?text=${MESSAGE}`
