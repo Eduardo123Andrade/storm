@@ -54,6 +54,7 @@ export const Intro = forwardRef<HTMLElement>((_, ref) => {
           "
         >
           <Image
+            unoptimized
             // className="object-fill"
             alt="image background"
             src={TVImage}
