@@ -41,8 +41,6 @@ export const Services = forwardRef<HTMLElement>((_, ref) => {
           max-xl:hidden
           self-center
           pt-12
-          max-xl:bg-red-600
-
       "
         >
           {SERVICES.map(renderItem)}

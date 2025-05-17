@@ -46,10 +46,24 @@ export const ITSolution = forwardRef<HTMLElement>((_, ref) => {
             grid
             grid-cols-3
             gap-12
-            max-xl:grid-cols-1
+            max-xl:hidden
             self-center
             pt-12 
           "
+        >
+          {IT_SOLUTIONS.map(renderItem)}
+        </div>
+
+        <div
+          className="
+           flex
+           gap-12
+           pt-12
+           px-12
+           overflow-scroll
+           min-xl:hidden
+           no-scrollbar
+        "
         >
           {IT_SOLUTIONS.map(renderItem)}
         </div>
