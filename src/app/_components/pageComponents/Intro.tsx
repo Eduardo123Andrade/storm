@@ -3,8 +3,8 @@
 import { Open_Sans } from "next/font/google"
 import { RedirectButton } from "../RedirectButton"
 import Image from "next/image"
-import TVImage from "../../../../public/assets/images/tvs3.png"
-// import TVImage from "../../../public/assets/gifs/tvs.gif"
+// import TVImage from "../../../../public/assets/images/tvs3.png"
+import TVImage from "../../../../public/assets/gifs/tvs.gif"
 import { Section } from "../Section"
 import { forwardRef } from "react"
 

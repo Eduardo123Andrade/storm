@@ -27,7 +27,7 @@ export const ITSolution = forwardRef<HTMLElement>((_, ref) => {
         from-gradient-end 
         from-0%
         to-test3
-        to-20%
+        to-30%
       "
     >
       <div

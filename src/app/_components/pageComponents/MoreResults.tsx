@@ -3,7 +3,7 @@ import { Footer } from "../Footer"
 
 export const MoreResults = () => {
   return (
-    <div>
+    <div className="bg-linear-to-b from-test1 from-50% to-storm-light-blue">
       <CallSpecialist />
       <Footer />
     </div>
