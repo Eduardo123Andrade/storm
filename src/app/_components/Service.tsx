@@ -24,9 +24,11 @@ export const Service: React.FC<ServiceProps> = ({
   const Illustration = icon
   return (
     <div
+      // className={`rounded-xl py-6 pl-4 pr-10 space-y-4 h-52 2xl:h-64 ${className}`}
       className={`rounded-xl py-6 pl-4 pr-10 space-y-4 max-w-96 h-52 2xl:h-64 ${className}`}
+      // className={`rounded-xl py-6 pl-4 pr-10 space-y-4 2xl:h-64 ${className}`}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-nowrap max-xl:w-96">
         <Image src={Illustration} alt="" />
         <h6 className={`${inter.className} text-lg font-bold`}>{title}</h6>
       </div>

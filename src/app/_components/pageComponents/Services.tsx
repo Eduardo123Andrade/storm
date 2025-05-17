@@ -38,9 +38,25 @@ export const Services = forwardRef<HTMLElement>((_, ref) => {
           grid
           grid-cols-3
           gap-12
-          max-xl:grid-cols-1
+          max-xl:hidden
           self-center
-          pt-12 
+          pt-12
+          max-xl:bg-red-600
+
+      "
+        >
+          {SERVICES.map(renderItem)}
+        </div>
+
+        <div
+          className="
+          flex
+          gap-12
+          pt-12
+          px-12
+          overflow-scroll
+          min-xl:hidden
+          no-scrollbar
       "
         >
           {SERVICES.map(renderItem)}
