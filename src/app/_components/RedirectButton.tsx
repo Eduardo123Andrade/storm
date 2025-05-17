@@ -2,6 +2,7 @@
 import { Inter } from "next/font/google"
 import ArrowLeft from "../../../public/assets/svgs/arrow.svg"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 interface ButtonProps {
   label: string
@@ -14,15 +15,28 @@ const inter = Inter({
   subsets: ["latin"],
 })
 
+const MOBILE_WIDTH = 512
+
 // const PHONE_NUMBER = "558186487809"
 const PHONE_NUMBER = "5581998194658"
-
-const URL = `https://wa.me/${PHONE_NUMBER}?text=olar, eu sou um teste de redirecionamento`
-// const URL = `https://web.whatsapp.com/send?phone=${PHONE_NUMBER}&text=olar, eu sou um teste de redirecionamento`
+const MESSAGE = "Olá. Tenho interesse em conhecer os serviços"
 
 export const RedirectButton: React.FC<ButtonProps> = ({ label }) => {
+  const [url, setUrl] = useState<string>()
+
+  useEffect(() => {
+    if (!url) {
+      const { innerWidth } = window
+      const URL =
+        innerWidth <= MOBILE_WIDTH
+          ? `https://wa.me/${PHONE_NUMBER}?text=${MESSAGE}`
+          : `https://web.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${MESSAGE}`
+      setUrl(URL)
+    }
+  }, [url])
+
   const _onPress = () => {
-    window.open(URL)
+    window.open(url)
   }
 
   return (
