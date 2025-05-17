@@ -3,7 +3,6 @@
 import { Open_Sans } from "next/font/google"
 import { RedirectButton } from "../RedirectButton"
 import Image from "next/image"
-// import TVImage from "../../../../public/assets/images/tvs3.png"
 import TVImage from "../../../../public/assets/gifs/tvs.gif"
 import { Section } from "../Section"
 import { forwardRef } from "react"
@@ -15,17 +14,12 @@ const openSans = Open_Sans({
 })
 
 export const Intro = forwardRef<HTMLElement>((_, ref) => {
-  const onClick = () => {
-    console.log("here")
-  }
-
   return (
     <Section
       ref={ref}
-      // className="overflow-hidden flex flex-col justify-end px-32 pt-32"
-      className="flex flex-col justify-center px-32"
+      className="flex flex-col justify-center px-32 max-mobile:px-16"
     >
-      <section className="flex justify-between items-center">
+      <div className="flex justify-between items-center max-mobile:flex-col-reverse">
         <div className="flex flex-col gap-5 2xl:gap-10">
           <div>
             <h1
@@ -53,17 +47,22 @@ export const Intro = forwardRef<HTMLElement>((_, ref) => {
           </div>
         </div>
 
-        <div className="">
+        <div
+          className="
+            flex
+            max-mobile:justify-evenly
+          "
+        >
           <Image
-            className="object-fill"
+            // className="object-fill"
             alt="image background"
             src={TVImage}
             // fill
-            sizes="(max-width: 768px) 0vw, 50vw"
+            // sizes="(max-width: 768px) 0vw, 50vw"
             quality={100}
           />
         </div>
-      </section>
+      </div>
     </Section>
   )
 })

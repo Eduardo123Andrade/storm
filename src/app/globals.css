@@ -25,6 +25,8 @@
 }
 
 @theme {
+  --breakpoint-mobile: 513px;
+
   --animate-horizontal-infinity-scroll: horizontal-infinity-scroll 15s linear
     infinite;
 
